@@ -15,6 +15,7 @@ public class UserController {
 
     @RequestMapping("/user/{uid}")
     public User getUserById(@PathVariable("uid") int uid) {
+        System.out.println("The method getUserById is called!");
         return userService.getUserById(uid);
     }
 }

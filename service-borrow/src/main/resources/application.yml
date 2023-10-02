@@ -2,8 +2,20 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: borrowservice
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spring-cloud-demo
+    url: jdbc:mysql://localhost:3306/demo
     username: root
     password: 123456
+
+mybatis:
+  configuration:
+    cache-enabled: false
+    local-cache-scope: statement
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
